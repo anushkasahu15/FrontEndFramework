@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Card With Bulma</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding-top: 20px;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #363636;
+    }
+
+    .card-content a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #3273dc;
+      font-weight: bold;
+    }
+
+    .card-content a:hover {
+      color: #2752b8;
+      text-decoration: underline;
+    }
+
+    .card-image img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="columns is-multiline">
+
+      <!-- Card 1 -->
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="redfort.jpeg" alt="Red Fort">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p><b>RED FORT: </b>The Red Fort or Lal Qila is a historic fort in Old Delhi, India. It served as the main residence of the Mughal emperors.</p>
+            <a href="https://en.wikipedia.org/wiki/Red_Fort" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="qutubminar.jpeg" alt="Qutub Minar">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p><b>Qutub Minar: </b>The Qutub Minar is a minaret and victory tower that forms part of the Qutb complex in Delhi's oldest fortified city, Lal Kot.</p>
+            <a href="https://en.wikipedia.org/wiki/Qutb_Minar" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="Hawamahal'.jpeg" alt="Hawa Mahal">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p><b>Hawa Mahal: </b>The Hawa Mahal is a palace in Jaipur, Rajasthan, built from red and pink sandstone. It is part of the City Palace complex.</p>
+            <a href="https://en.wikipedia.org/wiki/Hawa_Mahal" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="indiagate.jpeg" alt="India Gate">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p><b>India Gate: </b>India Gate is a war memorial located in New Delhi near Kartavya Path, commemorating soldiers of the Indian Army.</p>
+            <a href="https://en.wikipedia.org/wiki/India_Gate" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="charminar.jpeg" alt="Charminar">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p><b>Charminar: </b>The Charminar is a monument in Hyderabad, Telangana, built in 1591. It is a symbol of Hyderabad and Telangana.</p>
+            <a href="https://en.wikipedia.org/wiki/Charminar" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        const title = card.querySelector('b')?.textContent || 'A monument';
+        alert(`You clicked on ${title}`);
+      });
+    });
+  </script>
+</body>
+</html>
